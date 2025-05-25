@@ -4,3 +4,4 @@ cv2
 sklearn
 tensorflow
 os
+matplotlib
