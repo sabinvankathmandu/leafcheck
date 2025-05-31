@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LeafCheck - Predict</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header>
+      LeafCheck
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="predict.html" class="active">Predict</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <aside class="sidebar">
+        <!-- Empty sidebar for now -->
+      </aside>
+
+      <main class="main-content">
+        <h2>Try LeafCheck Prediction</h2>
+
+        <div class="upload-section">
+          <label for="upload">Upload a Leaf Image:</label>
+          <input type="file" id="upload" accept="image/*" />
+          <img id="preview" alt="Leaf Preview" />
+        </div>
+
+        <div class="webcam-section">
+          <label for="cameraSelect">Select Camera:</label>
+          <select id="cameraSelect"></select>
+          <button id="webcamButton">Use Webcam</button>
+          <button id="stopWebcamButton" disabled>Stop Webcam</button>
+          <div id="webcam-container"></div>
+        </div>
+
+        <button id="predictButton" disabled>Predict</button>
+
+        <div class="result-box">
+          <div id="result">🌱 Detected: -</div>
+          <div id="confidence">🔍 Confidence: -</div>
+          <button id="moreInfoButton" style="display: none">
+            Display More
+          </button>
+        </div>
+
+        <div id="extraInfo" class="result-box" style="display: none">
+          <h3>Details</h3>
+          <p><strong>Symptoms:</strong> <span id="symptoms"></span></p>
+          <p><strong>Solutions:</strong> <span id="solutions"></span></p>
+          <p><strong>Medicines:</strong> <span id="medicines"></span></p>
+          <p><strong>Home Remedies:</strong> <span id="remedies"></span></p>
+        </div>
+      </main>
+    </div>
+
+    <footer>&copy; 2025 LeafCheck. All rights reserved.</footer>
+
+    <!-- FIX: Load scripts in correct order -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.8.0/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>
