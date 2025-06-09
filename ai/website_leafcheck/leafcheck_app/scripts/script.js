@@ -1,6 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
   const mainContent = document.getElementById("mainContent");
 
+  // Hamburger menu setup
+  const hamburger = document.querySelector(".hamburger");
+  const nav = document.querySelector("header nav");
+  if (hamburger && nav) {
+    hamburger.addEventListener("click", () => {
+      nav.classList.toggle("active");
+      hamburger.classList.toggle("active");
+    });
+  }
+
   function setupPredictPage() {
     const imageUpload = document.getElementById("imageUpload");
     const imagePreview = document.getElementById("imagePreview");
