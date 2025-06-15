@@ -9,7 +9,7 @@ https://github.com/sabinvankathmandu/leafcheck/tree/sabin_ai/ai/leafcheck_api
 when you are on this directory create a virtual environment
 
 ## Create a virtual environment (optional but recommended)
-python -m venv venv
+python -m venv venv  
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 ## Install Dependencies
